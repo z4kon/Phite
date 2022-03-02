@@ -67,16 +67,16 @@ var MatchDTO = MatchV5.GetMatchData(MatchList); // Before getting match data, ma
 
 - A search window
 
-[Search](Phite/tree/master/Tests/demo/logindemo.png)
+![Search](Phite/tree/master/Tests/demo/logindemo.png)
 
 - after pressing search button, app gathers various data, and performs some calculations (some may be wrong or off a bit)
 
-[Search](Phite/tree/master/Tests/demo/ProfileDemo.png)
+![Search](Phite/tree/master/Tests/demo/ProfileDemo.png)
 
 - A Match List of 20 games, by pressing on any match, a statistics window opens up, which has couple demos on how data could be used
   calculations are/may be bit off, aswell as the design, as the whole app was built just for testing the api and the library for learning and fun.
 
-[Search](Phite/tree/master/Tests/demo/StatsDemo.png)
+![Search](Phite/tree/master/Tests/demo/StatsDemo.png)
 
 
 
