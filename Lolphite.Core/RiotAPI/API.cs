@@ -41,10 +41,12 @@ namespace Lolphite.Core.RiotAPI
 
         /// <summary>
         /// IMPORTANT: Requires Constants Class to be initialized before!
-        /// <para>Important: Three valid routes are: americas, asia, europe.</para>
+        /// <para>Important: 
+        /// Three valid routes are: americas, asia, europe.
+        /// By default it is set to Europe Region.
+        /// </para>
         /// </summary>
         /// <param name="path"> endpoint path</param>
-        /// By default it is set to Europe Region.
         /// <param name="IgnoreRegionalRoute"> 
         /// By default set to true. Certains requests need platform routes, such as EUW1, NA1 or RU,
         /// while others require a regional Route such as americas, asia or europe.
