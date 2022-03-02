@@ -6,6 +6,11 @@ A Simple RiotAPI C# implementation. As of now, supports only League of Legends g
 
 
 ## Using the library 
+### 1. Before using the library in any way create a text file, for example Key.txt or apikey.txt anywhere in your pc
+### 2. Register on **[Riot Developers API](https://developer.riotgames.com/)**. Here you will get a development Riot API Key.
+### 3. Copy the key, and put it inside your text file. Copy the path of the text file, and in GetKey class set the correct path to your api key text file.
+
+
 ### Depending on how you may plan to use the library, there are two main ways.
 ### Option 1 - Easy way.
 ~~~C#
