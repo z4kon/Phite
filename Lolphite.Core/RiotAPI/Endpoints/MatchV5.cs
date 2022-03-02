@@ -1,11 +1,6 @@
 ﻿using Lolphite.Core.Model;
 using Lolphite.Core.Utilities;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lolphite.Core.RiotAPI.Endpoints
 {
