@@ -11,7 +11,7 @@ namespace Lolphite.Core.Utilities
     /// Important: Constants Class holds data, that will remain static/unchanging throughout runtime. It is important, that this should be
     /// initialized as soon as possible before proceeding using the rest of the library, as multiple classes may or are dependant on this class properties.
     /// A good practice is to perform a SummonerV4 Request, because that holds all the necessary data, to initialize Constants Class properties.
-    /// Region can be initialized in any way, depending on the architecture, but it is the most important property, because RiotAPI class is 
+    /// Region should be the first property to be initialized as RiotAPI class is 
     /// directly dependant on Region Property, for making API requests, Therefore a good practice is 1. Initialize Region, 2. Perform SummonerV4
     /// api request and initialize others.
     /// </summary>
