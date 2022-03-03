@@ -21,7 +21,7 @@ namespace Lolphite.Core
         /// <param name="route"> Define the platform in which the player you search is</param>
         /// <param name="SummonerName"></param>
         /// <param name="API_KEY">
-        /// To save time, have fun, or build a small app, you pass api key directly
+        /// To save time, have fun, or build a small app, you can pass api key directly
         /// through this parameter, although this is not recommended. Hard-Coding an api key
         /// in the code poses security risks to the key.
         /// Especially, if you plan to publish your app to any public repository.
