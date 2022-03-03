@@ -17,8 +17,8 @@ A Simple RiotAPI C# implementation. As of now, supports only League of Legends g
 // Include Lolphite.Core
 using Lolphite.Core
 
-// Use library entry point, to initialize it.
-var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin");
+// Use library entry point, to initialize it. You can pass Api key in here, or set it manually in GetKey Class. Latter is recommended.
+var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin", "RGAPI-12345678-1234-1234-1234-1234567891012");
 
 // example
 Console.WriteLine($"Name:   {summonerDTO.Name}" +
