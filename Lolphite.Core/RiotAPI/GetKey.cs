@@ -5,7 +5,7 @@ namespace Lolphite.Core.RiotAPI
     /// </summary>
     public class GetKey
     {
-        public string? Key { get; set; }
+        public static string? Key { get; set; }
 
         /// <summary>
         /// Set Path before using!
@@ -13,7 +13,7 @@ namespace Lolphite.Core.RiotAPI
         /// <returns> Riot API KEY</returns>
         public static string Get()
         {
-            if(string.IsEmptyOrNull(Key))
+            if(string.IsNullOrEmpty(Key))
             {
                 string path = "";
                 StreamReader sr = new StreamReader(path);
