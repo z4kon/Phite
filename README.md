@@ -78,8 +78,8 @@ var MatchDTO = MatchV5.GetMatchData(MatchList); // Before getting match data, ma
 
 ![Search](/Tests/demo/ProfileDemo.png)
 
-- A Match List of 20 games, by pressing on any match, a statistics window opens up, which has couple demos on how data could be used
-  calculations are/may be bit off, aswell as the design, as the whole app was built just for testing the api and the library for learning and fun.
+- By pressing on any match, a statistics window opens up, with a list of all participants and their data. This window has couple demos on how data could be used for
+  any kind of analysis, for example, here, we can get multiple insights on each participant. The design, analysis are/may be bit off, due to just using it for learning purposes, testing the api and library.
 
 ![Search](/Tests/demo/statsdemo.png)
 
