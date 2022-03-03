@@ -13,9 +13,14 @@ namespace Lolphite.Core.RiotAPI
         /// <returns> Riot API KEY</returns>
         public static string Get()
         {
-            string path = "";
-            StreamReader sr = new StreamReader(path);
-            return sr.ReadToEnd();
+            if(string.IsEmptyOrNull(Key))
+            {
+                string path = "";
+                StreamReader sr = new StreamReader(path);
+                Key = sr.ReadToEnd();
+                return sr.ReadToEnd();
+            }
+            return Key;
         }
     }
 }
