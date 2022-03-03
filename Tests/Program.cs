@@ -15,7 +15,7 @@ namespace Tests
             #region Option 1: Initialization, USE OPTIONALLY
 
             Console.WriteLine("Option 1 - Automatic initialization");
-            var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin");
+            var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin", "RGAPI-12345678-1234-1234-1234-1234567891012");
 
             Console.WriteLine("------------------------------------", Console.ForegroundColor = ConsoleColor.Green);
             Console.WriteLine(Constants.Platform);

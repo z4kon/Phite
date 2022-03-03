@@ -20,7 +20,6 @@ namespace Lolphite.Core.RiotAPI.Endpoints
             if (Constants.Initialized)
             {
                 string path = $"lol/summoner/v4/summoners/by-name/{Constants.SummonerName}?";
-
                 var response = GET(GetURI(path));
                 string content = response.Content.ReadAsStringAsync().Result;
 
