@@ -18,7 +18,7 @@ namespace Lolphite.Core.RiotAPI
                 string path = "";
                 StreamReader sr = new StreamReader(path);
                 Key = sr.ReadToEnd();
-                return sr.ReadToEnd();
+                return Key;
             }
             return Key;
         }
