@@ -3,6 +3,7 @@ A Simple RiotAPI C# implementation. As of now, supports only League of Legends g
 
 ### Phite Goals
 - Ease of Use. Code is very simple. The project was done during spare time for learning purposes, beware of errors or non-sense.
+- It works :D
 
 
 ## Using the library 
