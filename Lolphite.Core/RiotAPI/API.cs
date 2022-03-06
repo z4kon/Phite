@@ -30,13 +30,11 @@ namespace Lolphite.Core.RiotAPI
         
         protected static HttpResponseMessage GET(string URL)
         {
-            using (HttpClient client = new())
-            {
-                var response = client.GetAsync(URL);
-                response.Wait();
+            using HttpClient client = new();
+            var response = client.GetAsync(URL);
+            response.Wait();
 
-                return response.Result;
-            }
+            return response.Result;
         }
 
         /// <summary>
@@ -59,17 +57,13 @@ namespace Lolphite.Core.RiotAPI
                 return $"https://{Constants.Platform}.api.riotgames.com/{path}&api_key={API_Key}";
             else
             {
-                switch(Constants.Region)
+                return Constants.Region switch
                 {
-                    case RegionRoute.EUROPE:
-                        return $"https://europe.api.riotgames.com/{path}&api_key={API_Key}";
-                    case RegionRoute.ASIA:
-                        return $"https://asia.api.riotgames.com/{path}&api_key={API_Key}";
-                    case RegionRoute.AMERICAS:
-                        return $"https://americas.api.riotgames.com/{path}&api_key={API_Key}";
-                    default:
-                        return new Exception("Route was invalid!").ToString();
-                }
+                    RegionRoute.EUROPE => $"https://europe.api.riotgames.com/{path}&api_key={API_Key}",
+                    RegionRoute.ASIA => $"https://asia.api.riotgames.com/{path}&api_key={API_Key}",
+                    RegionRoute.AMERICAS => $"https://americas.api.riotgames.com/{path}&api_key={API_Key}",
+                    _ => new Exception("Route was invalid!").ToString(),
+                };
             }
         }
     }

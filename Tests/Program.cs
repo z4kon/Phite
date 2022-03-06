@@ -17,7 +17,7 @@ namespace Tests
             Console.WriteLine("Option 1 - Automatic initialization");
             var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin", "RGAPI-12345678-1234-1234-1234-1234567891012");
 
-            Console.WriteLine("------------------------------------", Console.ForegroundColor = ConsoleColor.Green);
+            Console.WriteLine("------------------------------------");
             Console.WriteLine(Constants.Platform);
             Console.WriteLine(Constants.Region);
             Console.WriteLine("------------------------------------");
@@ -82,7 +82,7 @@ namespace Tests
 
             foreach(var match in MatchDTO)
             {
-                Console.WriteLine("------------------------------------\n", Console.ForegroundColor = ConsoleColor.Green);
+                Console.WriteLine("------------------------------------\n");
                 Console.WriteLine($"Game ID: {match.info.gameId}");
                 Console.WriteLine($"Game Version: {match.info.gameVersion}");
 

@@ -16,7 +16,7 @@ namespace Lolphite.Core.RiotAPI
             if(string.IsNullOrEmpty(Key))
             {
                 string path = "";
-                StreamReader sr = new StreamReader(path);
+                StreamReader sr = new(path);
                 Key = sr.ReadToEnd();
                 return Key;
             }
