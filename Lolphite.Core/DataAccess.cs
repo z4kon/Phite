@@ -3,9 +3,8 @@
 namespace Lolphite.Core
 {
     /// <summary>
-    /// A class for local storage of static/unchanging data. By calling class methods directly, an sqlite database will be created
-    /// with a name "default.db3" in the app directory, otherwise call the constructor and set the fileName, to reuse or create multiple 
-    /// different databases.
+    /// A class for local storage of data. By calling class methods directly, an sqlite database will be created
+    /// with a name "default.db3" in the app directory, otherwise call the constructor and set the fileName.
     /// </summary>
     public class DataAccess
     {
@@ -24,15 +23,8 @@ namespace Lolphite.Core
                 fileName = value; 
             }
         }
+        static string DBFile => Path.Combine(Environment.CurrentDirectory, $"{FileName}.db3");
 
-        private static readonly string DBFile = Path.Combine(Environment.CurrentDirectory, $"{FileName}.db3");
-
-        /// <summary>
-        /// Create a separate database for different purpose.
-        /// </summary>
-        /// <param name="fileName"> Important notice: by creating a different database, be sure to always call a constructor in different parts
-        /// of code with the same fileName, otherwise you might run into issues, where this class might try storing data in to default.db3 database.
-        /// Unless you intend to only use the default.db3 database and only it, then calling this constructor is unecessary.</param>
         public DataAccess(string fileName)
         {
             FileName = fileName;

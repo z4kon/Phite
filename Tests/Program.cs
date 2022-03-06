@@ -17,6 +17,9 @@ namespace Tests
             Console.WriteLine("Option 1 - Automatic initialization");
             var summonerDTO = EntryPoint.Initialize(PlatformRoute.EUW1, "Agurin", "RGAPI-12345678-1234-1234-1234-1234567891012");
 
+            // You can use Data Access, to store dtos locally permanently
+            DataAccess.Insert(summonerDTO);
+
             Console.WriteLine("------------------------------------");
             Console.WriteLine(Constants.Platform);
             Console.WriteLine(Constants.Region);
@@ -52,7 +55,7 @@ namespace Tests
             #region Get Summoner Champion Masteries
             var MasteryDTO = ChampionMasteryV4.GetChampionMasteries();
 
-            foreach(var champMastery in MasteryDTO.ToList())
+            foreach (var champMastery in MasteryDTO.ToList())
             {
                 Console.WriteLine($"Champion ID: {champMastery.championId}");
                 Console.WriteLine($"Champion Level: {champMastery.championLevel}");
@@ -65,7 +68,7 @@ namespace Tests
             #region Get Summoner League Position Data
             var LeagueEntryDTO = LeagueV4.GetPosition();
 
-            foreach(var entry in LeagueEntryDTO.ToList())
+            foreach (var entry in LeagueEntryDTO.ToList())
             {
                 Console.WriteLine($"Name: { entry.SummonerName}", Console.ForegroundColor = ConsoleColor.Red);
                 Console.WriteLine($"Rank: { entry.FullRank}");
@@ -80,7 +83,7 @@ namespace Tests
 
             var MatchDTO = MatchV5.GetMatchData(MatchList);
 
-            foreach(var match in MatchDTO)
+            foreach (var match in MatchDTO)
             {
                 Console.WriteLine("------------------------------------\n");
                 Console.WriteLine($"Game ID: {match.info.gameId}");
@@ -89,7 +92,7 @@ namespace Tests
                 List<Participant>? participants = match.info.participants as List<Participant>;
 
                 Console.WriteLine("Participant Data:\n");
-                foreach(var participant in participants)
+                foreach (var participant in participants)
                 {
                     Console.WriteLine($"Name: {participant.summonerName}");
                     Console.WriteLine($"Champion: {participant.championName}");
@@ -102,6 +105,7 @@ namespace Tests
                 }
             }
             #endregion
+
 
         }
 
