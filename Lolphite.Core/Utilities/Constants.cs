@@ -19,10 +19,8 @@ namespace Lolphite.Core.Utilities
         {
             get
             {
-                if (string.IsNullOrEmpty(Platform.ToString()) &&
-                   string.IsNullOrEmpty(summonerName))
-                    return false;
-                return true;
+                return !(string.IsNullOrEmpty(Platform.ToString()) &&
+                         string.IsNullOrEmpty(summonerName));
             }
         }
 
