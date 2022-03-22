@@ -1,9 +1,7 @@
 # Phite
 A Simple RiotAPI C# implementation. As of now, supports only League of Legends general endpoints.
 
-### Phite Goals
-- Ease of Use. Code is very simple. The project was done during spare time for learning purposes, beware of errors or non-sense.
-- It works :D
+Phite main goal is Ease of Use. The project was done during spare time for learning purposes.
 
 
 ## Using the library 
